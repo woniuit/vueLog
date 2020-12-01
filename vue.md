@@ -41,7 +41,7 @@ VUE_APP_BASE_API = '/prod-api'
 "dev-build": "vue-cli-service build --mode development",
 ```
 
-![735803-20191121140048590-279787724](C:\Users\Administrator\Desktop\735803-20191121140048590-279787724.png)
+![735803-20191121140048590-279787724](C:\Users\Administrator\Desktop\vueLog\735803-20191121140048590-279787724.png)
 
 ## 使用
 
@@ -51,7 +51,7 @@ VUE_APP_BASE_API = '/prod-api'
 
 比如我们在axios请求中，就可以把它的baseURL设置为  process.env.VUE_APP_URL ，如下图所示：
 
-![23](C:\Users\Administrator\Desktop\23.png)
+![23](C:\Users\Administrator\Desktop\vueLog\23.png)
 
 后面的"/web"是根据我自己接口来的，你别也写个"/web"。
 
