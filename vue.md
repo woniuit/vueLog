@@ -58,3 +58,29 @@ VUE_APP_BASE_API = '/prod-api'
 如果你不确定你自己现在是在哪个环境变量下，可以   console.log("当前环境变量："+process.env.NODE_ENV) 和   console.log("当前环境路径："+process.env.VUE_APP_URL)  看下。
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 配置路径别名
+
+1.先在项目根目录下创建vue.config.js文件
+
+2.然后在文件里输入下面代码
+
+```
+const path = require('path');
+
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
+module.exports = {
+  lintOnSave: true,
+  chainWebpack: (config) => {
+    config.resolve.alias
+      .set('@', resolve('src'))
+      .set('@assets',resolve('src/assets'))
+      // 这里只写了两个个，你可以自己再加，按这种格式.set('', resolve(''))
+  }
+}
+```
+
+
+
