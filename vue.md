@@ -84,3 +84,16 @@ module.exports = {
 
 
 
+# Vue-cli3.0 使用less全局变量
+
+### 安装插件
+
+cnpm i style-resources-loader vue-cli-plugin-style-resources-loader --save-dev
+
+### 配置插件
+
+const path = require('path'); module.exports = {   pluginOptions: {      'style-resources-loader': {         preProcessor: 'less',         patterns: [            // 全局变量路径，不能使用路径别名            path.resolve(__dirname, 'src/assets/css/themes.less')         ]      }   } }
+
+
+
+
